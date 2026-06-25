@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://tatara-kj.github.io/remade-garden/carlux-kwidzyn/sitemap.xml
