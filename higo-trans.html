@@ -1,0 +1,663 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="HIGO-Trans Nowogard - transport krajowy, drogowy transport towarów, szybka wycena trasy, formularz zlecenia i obsługa firm."
+    />
+    <title>HIGO-Trans | Transport krajowy Nowogard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Sora:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    />
+    <link rel="stylesheet" href="higo-trans.css" />
+  </head>
+  <body>
+    <div class="page-loader" aria-hidden="true">
+      <div class="loader-mark">
+        <span>HIGO</span>
+        <small>Trans</small>
+      </div>
+      <div class="loader-track"><span></span></div>
+    </div>
+
+    <header class="higo-header" data-header>
+      <a class="higo-brand" href="#top" aria-label="HIGO-Trans - strona główna">
+        <span class="higo-logo" aria-hidden="true">
+          <span class="higo-logo__road"></span>
+          <strong>H</strong>
+        </span>
+        <span class="higo-brand__text">
+          <strong>HIGO-Trans</strong>
+          <small>Transport krajowy</small>
+        </span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-label="Otwórz menu" aria-expanded="false">
+        <i data-lucide="menu"></i>
+      </button>
+
+      <nav class="higo-nav" aria-label="Główna nawigacja">
+        <a href="#uslugi">Usługi</a>
+        <a href="#wycena">Wycena</a>
+        <a href="#realizacje">Realizacje</a>
+        <a href="#dla-firm">Dla firm</a>
+        <a href="#kontakt">Kontakt</a>
+      </nav>
+
+      <a class="header-phone" href="tel:+48660058614">
+        <i data-lucide="phone-call"></i>
+        <span>660 058 614</span>
+      </a>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-label="HIGO-Trans transport krajowy">
+        <div class="hero__media" data-hero-parallax>
+          <img
+            src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=2200&q=86"
+            alt="Samochód ciężarowy na trasie krajowej"
+          />
+        </div>
+        <div class="hero__overlay"></div>
+
+        <div class="hero__content">
+          <p class="eyebrow" data-reveal>Nowogard • zachodniopomorskie • cała Polska</p>
+          <h1 data-reveal>Transport krajowy z wyceną trasy od ręki.</h1>
+          <p class="hero__lead" data-reveal>
+            HIGO-Trans realizuje drogowy transport towarów na terenie Polski. Podaj trasę,
+            wybierz rodzaj ładunku i przygotuj kompletne zapytanie do szybkiego potwierdzenia
+            terminu oraz ceny.
+          </p>
+
+          <div class="hero__actions" data-reveal>
+            <a class="button button--primary" href="#wycena">
+              <i data-lucide="calculator"></i>
+              Oblicz transport
+            </a>
+            <a class="button button--ghost" href="#zapytanie">
+              <i data-lucide="send"></i>
+              Wyślij zapytanie
+            </a>
+          </div>
+        </div>
+
+        <aside class="hero-console" data-reveal aria-label="Szybki podgląd trasy">
+          <div class="console-top">
+            <span class="pulse-dot"></span>
+            <span>Aktywna trasa</span>
+            <strong data-console-service>Transport palet</strong>
+          </div>
+          <div class="route-line" aria-hidden="true">
+            <span class="route-point route-point--start"></span>
+            <span class="route-line__bar"><span></span></span>
+            <span class="route-point route-point--end"></span>
+          </div>
+          <div class="console-route">
+            <div>
+              <small>Załadunek</small>
+              <strong data-console-start>Nowogard</strong>
+            </div>
+            <i data-lucide="arrow-right"></i>
+            <div>
+              <small>Rozładunek</small>
+              <strong data-console-end>Szczecin</strong>
+            </div>
+          </div>
+          <dl class="console-metrics">
+            <div>
+              <dt>Dystans</dt>
+              <dd><span data-console-distance>63</span> km</dd>
+            </div>
+            <div>
+              <dt>Wycena od</dt>
+              <dd><span data-console-price>359</span> zł</dd>
+            </div>
+          </dl>
+        </aside>
+
+        <a class="scroll-cue" href="#uslugi" aria-label="Przejdź niżej">
+          <span></span>
+        </a>
+      </section>
+
+      <section class="proof-strip" aria-label="Najważniejsze informacje o firmie">
+        <div>
+          <strong>2018</strong>
+          <span>działalność od</span>
+        </div>
+        <div>
+          <strong>49.41.Z</strong>
+          <span>transport drogowy towarów</span>
+        </div>
+        <div>
+          <strong>PL</strong>
+          <span>przewozy krajowe</span>
+        </div>
+        <div>
+          <strong>72-200</strong>
+          <span>Nowogard</span>
+        </div>
+      </section>
+
+      <section id="uslugi" class="section-pad services-section">
+        <div class="section-head">
+          <p class="eyebrow">Wybór usługi</p>
+          <h2>Transport dopasowany do ładunku, trasy i terminu.</h2>
+          <p>
+            Oferta jest ułożona pod drogowy transport towarów: od pojedynczych ładunków po stałe
+            trasy dla firm. Wybierz wariant najbliższy zleceniu i przejdź od razu do wyceny.
+          </p>
+        </div>
+
+        <div class="service-picker" role="list">
+          <button class="service-card is-active" type="button" data-service-choice="palety" role="listitem">
+            <span class="service-card__icon"><i data-lucide="package-check"></i></span>
+            <strong>Palety i towary firmowe</strong>
+            <small>ładunki magazynowe, dostawy B2B, transport między punktami</small>
+          </button>
+          <button class="service-card" type="button" data-service-choice="budowlane" role="listitem">
+            <span class="service-card__icon"><i data-lucide="blocks"></i></span>
+            <strong>Materiały budowlane</strong>
+            <small>towar cięższy, wymagający dokładnych danych o wadze i wymiarach</small>
+          </button>
+          <button class="service-card" type="button" data-service-choice="maszyny" role="listitem">
+            <span class="service-card__icon"><i data-lucide="wrench"></i></span>
+            <strong>Maszyny i sprzęt</strong>
+            <small>gabaryty, sprzęt roboczy, elementy wymagające ustalenia mocowania</small>
+          </button>
+          <button class="service-card" type="button" data-service-choice="przeprowadzki" role="listitem">
+            <span class="service-card__icon"><i data-lucide="sofa"></i></span>
+            <strong>Meble i przeprowadzki</strong>
+            <small>rzeczy prywatne, wyposażenie, transport z pomocą przy znoszeniu</small>
+          </button>
+          <button class="service-card" type="button" data-service-choice="express" role="listitem">
+            <span class="service-card__icon"><i data-lucide="timer"></i></span>
+            <strong>Transport pilny</strong>
+            <small>szybsza realizacja po potwierdzeniu dostępności terminu</small>
+          </button>
+          <button class="service-card" type="button" data-service-choice="stale" role="listitem">
+            <span class="service-card__icon"><i data-lucide="repeat-2"></i></span>
+            <strong>Stałe trasy dla firm</strong>
+            <small>cykliczne przewozy, rozliczenia i indywidualne warunki współpracy</small>
+          </button>
+        </div>
+      </section>
+
+      <section id="wycena" class="section-pad quote-section">
+        <div class="section-head section-head--center">
+          <p class="eyebrow">Kalkulator i mapa</p>
+          <h2>Wstępna wycena transportu bez logowania.</h2>
+          <p>
+            Kalkulator podaje orientacyjny zakres na podstawie dystansu, typu usługi, wagi,
+            liczby palet oraz pomocy przy załadunku. Ostateczna cena wymaga potwierdzenia trasy i ładunku.
+          </p>
+        </div>
+
+        <div class="quote-grid">
+          <form class="calculator-panel" id="transportCalculator">
+            <div class="panel-top">
+              <span class="panel-kicker">Trasa</span>
+              <strong>Nowogard jako punkt startowy lub baza dla zlecenia</strong>
+            </div>
+
+            <div class="form-grid form-grid--two">
+              <label>
+                <span>Załadunek</span>
+                <input type="text" name="from" value="Nowogard" autocomplete="address-level2" />
+              </label>
+              <label>
+                <span>Rozładunek</span>
+                <input type="text" name="to" value="Szczecin" autocomplete="address-level2" />
+              </label>
+            </div>
+
+            <div class="quick-routes" aria-label="Popularne trasy">
+              <button type="button" data-route="Nowogard|Szczecin">Szczecin</button>
+              <button type="button" data-route="Nowogard|Koszalin">Koszalin</button>
+              <button type="button" data-route="Nowogard|Gdańsk">Gdańsk</button>
+              <button type="button" data-route="Nowogard|Poznań">Poznań</button>
+              <button type="button" data-route="Nowogard|Warszawa">Warszawa</button>
+            </div>
+
+            <div class="form-grid form-grid--three">
+              <label>
+                <span>Typ usługi</span>
+                <select name="service">
+                  <option value="palety">Palety i towary firmowe</option>
+                  <option value="budowlane">Materiały budowlane</option>
+                  <option value="maszyny">Maszyny i sprzęt</option>
+                  <option value="przeprowadzki">Meble i przeprowadzki</option>
+                  <option value="express">Transport pilny</option>
+                  <option value="stale">Stałe trasy dla firm</option>
+                </select>
+              </label>
+              <label>
+                <span>Waga ładunku</span>
+                <input type="number" name="weight" value="600" min="0" step="50" />
+              </label>
+              <label>
+                <span>Liczba palet / sztuk</span>
+                <input type="number" name="pallets" value="2" min="0" step="1" />
+              </label>
+            </div>
+
+            <div class="option-row">
+              <label class="check-card">
+                <input type="checkbox" name="loading" />
+                <span>
+                  <strong>Pomoc przy załadunku</strong>
+                  <small>dolicz orientacyjnie obsługę ręczną</small>
+                </span>
+              </label>
+              <label class="check-card">
+                <input type="checkbox" name="returnTrip" checked />
+                <span>
+                  <strong>Uwzględnij dojazd</strong>
+                  <small>realniejsza wycena dla lokalnej firmy</small>
+                </span>
+              </label>
+            </div>
+
+            <button class="button button--primary button--full" type="submit">
+              <i data-lucide="route"></i>
+              Przelicz trasę
+            </button>
+
+            <p class="calculator-note">
+              Wycena jest orientacyjna i nie stanowi oferty handlowej. Finalna kwota zależy od
+              ładunku, dostępności terminu, załadunku i warunków rozładunku.
+            </p>
+          </form>
+
+          <div class="map-panel">
+            <div class="map-shell">
+              <div id="routeMap" aria-label="Mapa trasy transportu"></div>
+              <div class="map-fallback" data-map-fallback>
+                <i data-lucide="map"></i>
+                <span>Mapa trasy</span>
+              </div>
+            </div>
+            <div class="estimate-card" aria-live="polite">
+              <span class="estimate-card__label">Wstępna wycena</span>
+              <strong><span data-estimate-price>359</span> zł</strong>
+              <div class="estimate-card__meta">
+                <span><i data-lucide="milestone"></i><b data-estimate-distance>63</b> km</span>
+                <span><i data-lucide="gauge"></i><b data-estimate-rate>4.20</b> zł/km</span>
+                <span><i data-lucide="truck"></i><b data-estimate-service>Palety</b></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="zapytanie" class="section-pad request-section">
+        <div class="request-layout">
+          <div class="request-copy">
+            <p class="eyebrow">Formularz transportowy</p>
+            <h2>Zapytanie trafia do HIGO-Trans jako komplet danych do wyceny.</h2>
+            <p>
+              Zamiast krótkiej wiadomości „ile za transport?”, klient zostawia trasę, termin,
+              dane ładunku i kontakt. Dzięki temu rozmowa telefoniczna jest krótsza i bardziej konkretna.
+            </p>
+            <div class="steps">
+              <article data-reveal>
+                <span>01</span>
+                <strong>Wybór usługi</strong>
+                <small>typ transportu ustawia formularz i kalkulator</small>
+              </article>
+              <article data-reveal>
+                <span>02</span>
+                <strong>Trasa i ładunek</strong>
+                <small>miejsca, data, waga, gabaryty i dodatkowe uwagi</small>
+              </article>
+              <article data-reveal>
+                <span>03</span>
+                <strong>Kontakt z firmą</strong>
+                <small>telefon lub e-mail do potwierdzenia ceny i terminu</small>
+              </article>
+            </div>
+          </div>
+
+          <form class="request-form" id="quoteForm">
+            <div class="form-grid form-grid--two">
+              <label>
+                <span>Imię i nazwisko</span>
+                <input type="text" name="name" placeholder="Jan Kowalski" required />
+              </label>
+              <label>
+                <span>Telefon</span>
+                <input type="tel" name="phone" placeholder="600 000 000" required />
+              </label>
+            </div>
+            <div class="form-grid form-grid--two">
+              <label>
+                <span>E-mail</span>
+                <input type="email" name="email" placeholder="kontakt@firma.pl" />
+              </label>
+              <label>
+                <span>Firma</span>
+                <input type="text" name="company" placeholder="Opcjonalnie" />
+              </label>
+            </div>
+            <div class="form-grid form-grid--two">
+              <label>
+                <span>Miejsce załadunku</span>
+                <input type="text" name="pickup" value="Nowogard" required />
+              </label>
+              <label>
+                <span>Miejsce rozładunku</span>
+                <input type="text" name="delivery" value="Szczecin" required />
+              </label>
+            </div>
+            <div class="form-grid form-grid--three">
+              <label>
+                <span>Data transportu</span>
+                <input type="date" name="date" />
+              </label>
+              <label>
+                <span>Rodzaj ładunku</span>
+                <select name="cargo">
+                  <option>Palety i towary firmowe</option>
+                  <option>Materiały budowlane</option>
+                  <option>Maszyny i sprzęt</option>
+                  <option>Meble / przeprowadzka</option>
+                  <option>Inny ładunek</option>
+                </select>
+              </label>
+              <label>
+                <span>Szacowana waga</span>
+                <input type="text" name="cargoWeight" placeholder="np. 600 kg" />
+              </label>
+            </div>
+            <label>
+              <span>Opis ładunku i uwagi</span>
+              <textarea
+                name="message"
+                rows="5"
+                placeholder="Wymiary, liczba palet, warunki załadunku, piętro, godziny odbioru..."
+              ></textarea>
+            </label>
+            <input type="hidden" name="estimatedDistance" />
+            <input type="hidden" name="estimatedPrice" />
+            <button class="button button--primary button--full" type="submit">
+              <i data-lucide="mail"></i>
+              Przygotuj zapytanie e-mail
+            </button>
+            <p class="form-status" role="status"></p>
+          </form>
+        </div>
+      </section>
+
+      <section id="realizacje" class="section-pad gallery-section">
+        <div class="section-head">
+          <p class="eyebrow">Galeria i realizacje</p>
+          <h2>Transport pokazany przez typowe sytuacje: ładunek, trasa, termin i odbiór.</h2>
+          <p>
+            Galeria porządkuje najczęstsze typy realizacji: przewozy krajowe, towary firmowe,
+            materiały budowlane oraz ładunki wymagające dokładnego ustalenia parametrów.
+          </p>
+        </div>
+
+        <div class="gallery-filter" aria-label="Filtry galerii">
+          <button class="is-active" type="button" data-gallery-filter="all">Wszystko</button>
+          <button type="button" data-gallery-filter="towary">Towary</button>
+          <button type="button" data-gallery-filter="budowa">Budowlane</button>
+          <button type="button" data-gallery-filter="trasy">Trasy</button>
+        </div>
+
+        <div class="gallery-grid">
+          <article class="gallery-card gallery-card--wide" data-gallery-item="trasy" data-reveal>
+            <img
+              src="https://images.unsplash.com/photo-1519003722824-194d4455a60c?auto=format&fit=crop&w=1300&q=84"
+              alt="Samochód ciężarowy jadący trasą krajową"
+            />
+            <div>
+              <span>Trasy krajowe</span>
+              <strong>Przewozy drogowe na terenie Polski</strong>
+            </div>
+          </article>
+          <article class="gallery-card" data-gallery-item="towary" data-reveal>
+            <img
+              src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=900&q=84"
+              alt="Towary i paczki przygotowane do transportu"
+            />
+            <div>
+              <span>Towary firmowe</span>
+              <strong>Ładunki magazynowe i paletowe</strong>
+            </div>
+          </article>
+          <article class="gallery-card" data-gallery-item="budowa" data-reveal>
+            <img
+              src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=900&q=84"
+              alt="Materiały budowlane i plac roboczy"
+            />
+            <div>
+              <span>Budowlane</span>
+              <strong>Transport materiałów po ustaleniu parametrów</strong>
+            </div>
+          </article>
+          <article class="gallery-card" data-gallery-item="towary" data-reveal>
+            <img
+              src="https://images.unsplash.com/photo-1494412519320-aa613dfb7738?auto=format&fit=crop&w=900&q=84"
+              alt="Załadunek towaru do transportu"
+            />
+            <div>
+              <span>Załadunek</span>
+              <strong>Dokładne dane ładunku przed wyceną</strong>
+            </div>
+          </article>
+          <article class="gallery-card gallery-card--tall" data-gallery-item="trasy" data-reveal>
+            <img
+              src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=84"
+              alt="Droga krajowa w krajobrazie"
+            />
+            <div>
+              <span>Region</span>
+              <strong>Nowogard, zachodniopomorskie i kierunki krajowe</strong>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="dla-firm" class="section-pad business-section">
+        <div class="business-panel">
+          <div>
+            <p class="eyebrow">Dla firm</p>
+            <h2>Stała współpraca, powtarzalne trasy i konkretne dane zlecenia.</h2>
+            <p>
+              HIGO-Trans może obsługiwać klientów, którzy potrzebują regularnych przewozów:
+              sklepy, hurtownie, wykonawców, magazyny i firmy z regionu zachodniopomorskiego.
+              Przy stałych zleceniach liczą się powtarzalne trasy, jasny harmonogram i szybka
+              komunikacja z osobą odpowiedzialną za transport.
+            </p>
+          </div>
+          <div class="business-features">
+            <article>
+              <i data-lucide="calendar-range"></i>
+              <strong>Cykliczne terminy</strong>
+              <span>przewozy tygodniowe, miesięczne lub według harmonogramu</span>
+            </article>
+            <article>
+              <i data-lucide="file-check-2"></i>
+              <strong>Zapytania z kompletem danych</strong>
+              <span>trasa, ładunek, kontakt, termin i orientacyjna wycena</span>
+            </article>
+            <article>
+              <i data-lucide="map-pinned"></i>
+              <strong>Kierunki krajowe</strong>
+              <span>transport drogowy towarów z bazą w Nowogardzie</span>
+            </article>
+            <article>
+              <i data-lucide="handshake"></i>
+              <strong>Warunki indywidualne</strong>
+              <span>osobna wycena przy stałych trasach i większej liczbie zleceń</span>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-pad route-section">
+        <div class="section-head section-head--center">
+          <p class="eyebrow">Popularne kierunki</p>
+          <h2>Trasy, które klient może wybrać jednym kliknięciem.</h2>
+        </div>
+        <div class="route-cards">
+          <button type="button" data-route-card="Nowogard|Szczecin">
+            <span>Nowogard</span>
+            <i data-lucide="arrow-right"></i>
+            <strong>Szczecin</strong>
+            <small>ok. 63 km</small>
+          </button>
+          <button type="button" data-route-card="Nowogard|Koszalin">
+            <span>Nowogard</span>
+            <i data-lucide="arrow-right"></i>
+            <strong>Koszalin</strong>
+            <small>ok. 111 km</small>
+          </button>
+          <button type="button" data-route-card="Nowogard|Gdańsk">
+            <span>Nowogard</span>
+            <i data-lucide="arrow-right"></i>
+            <strong>Gdańsk</strong>
+            <small>ok. 281 km</small>
+          </button>
+          <button type="button" data-route-card="Nowogard|Warszawa">
+            <span>Nowogard</span>
+            <i data-lucide="arrow-right"></i>
+            <strong>Warszawa</strong>
+            <small>ok. 560 km</small>
+          </button>
+        </div>
+      </section>
+
+      <section class="section-pad faq-section">
+        <div class="section-head">
+          <p class="eyebrow">FAQ</p>
+          <h2>Najczęstsze pytania przed wyceną transportu.</h2>
+        </div>
+        <div class="faq-list">
+          <article class="faq-item is-open">
+            <button type="button">
+              <span>Czy kalkulator pokazuje finalną cenę?</span>
+              <i data-lucide="plus"></i>
+            </button>
+            <p>
+              Nie. Wynik jest orientacyjny i pomaga szybko ocenić koszt. Finalna wycena zależy
+              od ładunku, terminu, dostępu do miejsca załadunku i szczegółów rozładunku.
+            </p>
+          </article>
+          <article class="faq-item">
+            <button type="button">
+              <span>Jakie dane warto podać w zapytaniu?</span>
+              <i data-lucide="plus"></i>
+            </button>
+            <p>
+              Najważniejsze są: dokładna trasa, termin, waga, wymiary, liczba palet lub sztuk,
+              sposób załadunku oraz informacja, czy potrzebna jest pomoc kierowcy.
+            </p>
+          </article>
+          <article class="faq-item">
+            <button type="button">
+              <span>Czy firma obsługuje stałe trasy?</span>
+              <i data-lucide="plus"></i>
+            </button>
+            <p>
+              Strona jest przygotowana pod takie zapytania. Przy cyklicznych przewozach najlepiej
+              wysłać dane kilku tras i przewidywaną liczbę transportów w miesiącu.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="kontakt" class="contact-section">
+        <div class="contact-media" aria-hidden="true">
+          <img
+            src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=1600&q=86"
+            alt=""
+          />
+        </div>
+        <div class="contact-card" data-reveal>
+          <p class="eyebrow">Kontakt</p>
+          <h2>HIGO-Trans Grzegorz Olkowski</h2>
+          <div class="contact-grid">
+            <a href="tel:+48660058614">
+              <i data-lucide="phone"></i>
+              <span>
+                <small>Telefon</small>
+                <strong>660 058 614</strong>
+              </span>
+            </a>
+            <a href="mailto:grzegorzolkowski@gmail.com">
+              <i data-lucide="mail"></i>
+              <span>
+                <small>E-mail</small>
+                <strong>grzegorzolkowski@gmail.com</strong>
+              </span>
+            </a>
+            <div>
+              <i data-lucide="map-pin"></i>
+              <span>
+                <small>Adres rejestrowy</small>
+                <strong>Bohaterów Warszawy 103/14, 72-200 Nowogard</strong>
+              </span>
+            </div>
+            <div>
+              <i data-lucide="badge-check"></i>
+              <span>
+                <small>NIP / REGON</small>
+                <strong>8561760451 / 369751045</strong>
+              </span>
+            </div>
+          </div>
+          <div class="contact-actions">
+            <a class="button button--primary" href="tel:+48660058614">
+              <i data-lucide="phone-call"></i>
+              Zadzwoń teraz
+            </a>
+            <a class="button button--ghost-dark" href="#wycena">
+              <i data-lucide="calculator"></i>
+              Wróć do wyceny
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <strong>HIGO-Trans</strong>
+        <span>Transport drogowy towarów • Nowogard • Polska</span>
+      </div>
+      <a href="#top">Do góry</a>
+    </footer>
+
+    <div class="mobile-cta" aria-label="Szybkie akcje">
+      <a href="tel:+48660058614">
+        <i data-lucide="phone"></i>
+        Telefon
+      </a>
+      <a href="#wycena">
+        <i data-lucide="calculator"></i>
+        Wycena
+      </a>
+    </div>
+
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="higo-trans.js"></script>
+  </body>
+</html>
