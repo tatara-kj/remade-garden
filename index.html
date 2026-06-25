@@ -1,0 +1,763 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="REMADE Polska - profesjonalne ogrody, remonty, sprzątanie i wypożyczalnia sprzętu ogrodniczego w Nowym Targu."
+    />
+    <title>REMADE Polska | Ogrody, remonty, czystość</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="preloader" aria-hidden="true">
+      <div class="preloader__mark">REMADE</div>
+      <div class="preloader__line"></div>
+    </div>
+
+    <header class="site-header" data-header>
+      <a class="brand" href="index.html" aria-label="REMADE Polska - strona główna">
+        <span class="brand__symbol">
+          <img src="assets/remade-garden.png" alt="" />
+        </span>
+        <span class="brand__text">
+          <strong>REMADE</strong>
+          <small>Polska</small>
+        </span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-label="Otwórz menu" aria-expanded="false">
+        <i data-lucide="menu"></i>
+      </button>
+
+      <nav class="site-nav" aria-label="Główna nawigacja">
+        <a href="garden.html">Garden</a>
+        <a href="house.html">House</a>
+        <a href="clean.html">Clean</a>
+        <a href="wypozyczalnia.html">Sprzęt</a>
+        <a href="#cennik">Cennik</a>
+        <a href="#kontakt">Kontakt</a>
+      </nav>
+
+      <a class="header-call" href="tel:+48513619999">
+        <i data-lucide="phone-call"></i>
+        <span>513 61 99 99</span>
+      </a>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-label="REMADE Polska">
+        <div class="hero__bg" data-hero-parallax></div>
+        <div class="hero__shade"></div>
+
+        <div class="hero__content">
+          <p class="eyebrow" data-reveal>Nowy Targ · Podhale · kompleksowe realizacje</p>
+          <h1 data-reveal>Ogrody, domy i czystość w standardzie premium.</h1>
+          <p class="hero__lead" data-reveal>
+            REMADE łączy projektowanie i pielęgnację ogrodów, remonty, usługi porządkowe
+            oraz wypożyczalnię sprzętu. Jeden zespół, jasny plan i efekt, który robi
+            wrażenie od pierwszego spojrzenia.
+          </p>
+
+          <div class="hero__actions" data-reveal>
+            <a class="button button--primary" href="#kontakt">
+              <i data-lucide="calendar-check"></i>
+              Umów konsultację
+            </a>
+            <a class="button button--ghost" href="#realizacje">
+              <i data-lucide="sparkles"></i>
+              Zobacz styl
+            </a>
+          </div>
+
+        </div>
+
+        <aside class="hero__panel" aria-label="Szybki kontakt" data-reveal>
+          <span class="hero__panel-kicker">REMADE Garden</span>
+          <h2>Sezonowa opieka nad ogrodem</h2>
+          <p>Projekt, nasadzenia, trawnik, nawodnienie, ogrodzenia, porządki i serwis.</p>
+          <a href="mailto:garden@re-made.pl">garden@re-made.pl</a>
+        </aside>
+
+        <a class="scroll-cue" href="#marki" aria-label="Przejdź niżej">
+          <span></span>
+        </a>
+      </section>
+
+      <section class="trust-bar" aria-label="Najważniejsze liczby REMADE">
+        <div>
+          <strong data-count="10">0</strong>
+          <span>lat doświadczenia</span>
+        </div>
+        <div>
+          <strong>5.0</strong>
+          <span>ocena Google</span>
+        </div>
+        <div>
+          <strong>4</strong>
+          <span>marki usługowe</span>
+        </div>
+        <div>
+          <strong>BLIK</strong>
+          <span>karta i telefon</span>
+        </div>
+      </section>
+
+      <section id="marki" class="brand-strip section-pad">
+        <div class="section-head">
+          <p class="eyebrow">Cztery wyspecjalizowane obszary</p>
+          <h2>Jedna firma do ogrodu, domu, czystości i sprzętu sezonowego.</h2>
+        </div>
+
+        <div class="brand-grid">
+          <article class="brand-tile brand-tile--red" data-reveal>
+            <img src="assets/remade-house.png" alt="ReMade House" />
+            <p>Remonty, wykończenia, meble na wymiar, instalacje, małe budownictwo i prace techniczne.</p>
+          </article>
+          <article class="brand-tile brand-tile--green" data-reveal>
+            <img src="assets/remade-garden.png" alt="ReMade Garden" />
+            <p>Rośliny, rabaty, trawniki, ogrodzenia, chodniki, porządki ogrodowe i walka z pasożytami.</p>
+          </article>
+          <article class="brand-tile brand-tile--blue" data-reveal>
+            <img src="assets/remade-clean.png" alt="ReMade Clean" />
+            <p>Sprzątanie domów, biur, hoteli, osiedli, samochodów oraz wsparcie w zarządzaniu flotą.</p>
+          </article>
+          <article class="brand-tile brand-tile--orange" data-reveal>
+            <img src="assets/remade-rental.png" alt="ReMade Wypożyczalnia" />
+            <p>Kosiarki, podkaszarki, glebogryzarki, wertykulatory, myjki, piły, wiertnice i drobny sprzęt.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="intro section-pad">
+        <div class="intro__image" data-parallax-card>
+          <img
+            src="https://images.unsplash.com/photo-1558904541-efa843a96f01?auto=format&fit=crop&w=1400&q=85"
+            alt="Elegancki ogród z trawnikiem i nasadzeniami"
+          />
+        </div>
+        <div class="intro__copy">
+          <p class="eyebrow">Od placu budowy do gotowej przestrzeni</p>
+          <h2>Ogród może przejść od placu po budowie do miejsca, w którym naprawdę chce się odpoczywać.</h2>
+          <p>
+            REMADE Garden zajmuje się najbliższym otoczeniem domu od wyrównania ziemi
+            i przygotowania terenu, przez dobór oraz sadzenie roślin, aż po koszenie trawy,
+            grabienie liści, mycie kostki brukowej, konserwację ogrodzeń i zimowe odśnieżanie.
+            Dzięki temu jeden zespół może zadbać zarówno o duże prace, jak i regularną pielęgnację.
+          </p>
+          <div class="signature-list">
+            <span><i data-lucide="leaf"></i> rabaty i nasadzenia</span>
+            <span><i data-lucide="bug-off"></i> ochrona roślin</span>
+            <span><i data-lucide="fence"></i> ogrodzenia</span>
+            <span><i data-lucide="snowflake"></i> odśnieżanie</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="uslugi" class="services section-pad">
+        <div class="section-head section-head--center">
+          <p class="eyebrow">Oferta</p>
+          <h2>Zakres usług obejmuje prace codzienne, sezonowe i większe realizacje.</h2>
+          <p>
+            Klient może zamówić jedną konkretną usługę albo połączyć kilka obszarów:
+            ogród, prace remontowo-budowlane, sprzątanie oraz wynajem profesjonalnego sprzętu.
+            To wygodne, gdy posesja wymaga kilku działań prowadzonych w tym samym czasie.
+          </p>
+        </div>
+
+        <div class="service-grid">
+          <article class="service-card service-card--featured" data-service="garden" data-reveal>
+            <div class="service-card__media">
+              <img
+                src="https://images.unsplash.com/photo-1591857177580-dc82b9ac4e1e?auto=format&fit=crop&w=1000&q=85"
+                alt="Prace ogrodnicze i pielęgnacja trawnika"
+              />
+            </div>
+            <div class="service-card__body">
+              <span class="service-card__tag">REMADE Garden</span>
+              <h3>Ogrody od projektu po sezonowy serwis</h3>
+              <ul>
+                <li>wyrównanie terenu, trawniki, nasadzenia, rabaty i dobór roślin</li>
+                <li>pielęgnacja roślin, cięcia, nawożenie oraz walka z pasożytami</li>
+                <li>budowa i konserwacja ogrodzeń, chodniki, altany i meble ogrodowe</li>
+                <li>koszenie, grabienie liści, mycie kostki brukowej i odśnieżanie</li>
+              </ul>
+              <a class="service-link" href="garden.html">Przejdź do REMADE Garden</a>
+            </div>
+          </article>
+
+          <article class="service-card" data-service="house" data-reveal>
+            <div class="service-card__media">
+              <img
+                src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1000&q=85"
+                alt="Nowoczesny dom po remoncie"
+              />
+            </div>
+            <div class="service-card__body">
+              <span class="service-card__tag">REMADE House</span>
+              <h3>Remonty, wykończenia i prace techniczne</h3>
+              <ul>
+                <li>remonty, wykończenia, prace ogólnobudowlane i roboty ziemne</li>
+                <li>instalacje elektryczne, wod-kan, CO, wentylacyjne, pomiary i odbiory</li>
+                <li>meble na wymiar, altany, wiaty, garaże, ogrodzenia i podjazdy</li>
+                <li>zarządzanie nieruchomościami i doradztwo przy budowach oraz remontach</li>
+              </ul>
+              <a class="service-link" href="house.html">Przejdź do REMADE House</a>
+            </div>
+          </article>
+
+          <article class="service-card" data-service="clean" data-reveal>
+            <div class="service-card__media">
+              <img
+                src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1000&q=85"
+                alt="Profesjonalne sprzątanie wnętrza"
+              />
+            </div>
+            <div class="service-card__body">
+              <span class="service-card__tag">REMADE Clean</span>
+              <h3>Czystość dla domów, firm i obiektów</h3>
+              <ul>
+                <li>sprzątanie biur, firm, hoteli, domów, mieszkań i osiedli</li>
+                <li>porządki po remontach, sezonowe prace i regularna obsługa obiektów</li>
+                <li>utrzymanie części wspólnych oraz przestrzeni dla pracowników i gości</li>
+                <li>kompleksowe mycie samochodów i wsparcie w zarządzaniu flotą firmową</li>
+              </ul>
+              <a class="service-link" href="clean.html">Przejdź do REMADE Clean</a>
+            </div>
+          </article>
+
+          <article class="service-card" data-service="rental" data-reveal>
+            <div class="service-card__media">
+              <img
+                src="https://images.unsplash.com/photo-1621955964441-c173e01c135b?auto=format&fit=crop&w=1000&q=85"
+                alt="Sprzęt ogrodniczy gotowy do pracy"
+              />
+            </div>
+            <div class="service-card__body">
+              <span class="service-card__tag">Wypożyczalnia</span>
+              <h3>Sprzęt ogrodniczy wtedy, gdy jest potrzebny</h3>
+              <ul>
+                <li>kosiarki, podkaszarki, podkrzesywarki, piły i nożyce</li>
+                <li>glebogryzarki, wertykulatory, walce, wiertnice i wiertła do ziemi</li>
+                <li>myjki ciśnieniowe, drabiny, dmuchawy, odkurzacze i drobne narzędzia</li>
+                <li>wypożyczalnia czynna 7 dni w tygodniu od 8:00 do 20:00</li>
+              </ul>
+              <a class="service-link" href="wypozyczalnia.html">Przejdź do wypożyczalni</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="process section-pad">
+        <div class="process__copy">
+          <p class="eyebrow">Jak pracujemy</p>
+          <h2>Klient widzi plan, budżet i kolejne kroki zanim zacznie się realizacja.</h2>
+          <p>
+            Każda realizacja zaczyna się od rozpoznania potrzeb, dopasowania zakresu
+            i ustalenia kolejności prac. Dzięki temu zlecenie jest przewidywalne,
+            a efekt spójny z domem, ogrodem i sposobem życia klienta.
+          </p>
+        </div>
+        <div class="process-steps">
+          <article data-reveal>
+            <span>01</span>
+            <h3>Diagnoza</h3>
+            <p>Oględziny terenu lub obiektu, potrzeby klienta, zakres i priorytety.</p>
+          </article>
+          <article data-reveal>
+            <span>02</span>
+            <h3>Koncepcja</h3>
+            <p>Propozycja rozwiązań, harmonogram, materiały, sprzęt i orientacyjny budżet.</p>
+          </article>
+          <article data-reveal>
+            <span>03</span>
+            <h3>Realizacja</h3>
+            <p>Prace prowadzone etapami, z porządkiem na miejscu i kontrolą jakości.</p>
+          </article>
+          <article data-reveal>
+            <span>04</span>
+            <h3>Opieka</h3>
+            <p>Serwis sezonowy, pielęgnacja, poprawki i dalszy rozwój przestrzeni.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="realizacje" class="showcase">
+        <div class="showcase__sticky">
+          <p class="eyebrow">Realizacje i standard prac</p>
+          <h2>Każda realizacja zaczyna się od praktycznego pytania: co ma być łatwiejsze po zakończeniu prac?</h2>
+          <p>
+            Czasem chodzi o odzyskanie zapuszczonego ogrodu, czasem o uporządkowanie
+            przestrzeni po remoncie, a czasem o stałą obsługę firmy lub obiektu.
+            Dlatego oferta łączy estetykę z konkretną funkcją: łatwiejszą pielęgnacją,
+            czystszym wnętrzem, sprawnym podjazdem albo sprzętem dostępnym dokładnie wtedy, gdy jest potrzebny.
+          </p>
+          <a class="button button--dark" href="#kontakt">
+            <i data-lucide="send"></i>
+            Poproś o wycenę
+          </a>
+        </div>
+
+        <div class="gallery">
+          <figure data-reveal data-float>
+            <img
+              src="https://images.unsplash.com/photo-1591857177580-dc82b9ac4e1e?auto=format&fit=crop&w=900&q=85"
+              alt="Zadbany ogród z drewnianą architekturą"
+            />
+            <figcaption>Rewitalizacja ogrodu: trawnik, rabaty i przejścia</figcaption>
+          </figure>
+          <figure data-reveal data-float>
+            <img
+              src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=900&q=85"
+              alt="Nowoczesny dom z zielenią"
+            />
+            <figcaption>Remont domu połączony z uporządkowaniem otoczenia</figcaption>
+          </figure>
+          <figure data-reveal data-float>
+            <img
+              src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&w=900&q=85"
+              alt="Rośliny w ogrodzie"
+            />
+            <figcaption>Dobór roślin, struktury rabat i sezonowa pielęgnacja</figcaption>
+          </figure>
+          <figure data-reveal data-float>
+            <img
+              src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=900&q=85"
+              alt="Elegancko wykończona łazienka"
+            />
+            <figcaption>Wykończenia, czystość po pracach i gotowość do odbioru</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="compare section-pad" aria-label="Porównanie przed i po">
+        <div class="section-head section-head--center">
+          <p class="eyebrow">Metamorfoza ogrodu</p>
+          <h2>Przeciągnij suwak i zobacz różnicę między terenem przed pracami a gotową przestrzenią.</h2>
+        </div>
+        <div class="comparison" data-compare style="--position: 52%">
+          <img
+            class="comparison__image"
+            src="https://images.unsplash.com/photo-1598902108854-10e335adac99?auto=format&fit=crop&w=1500&q=82"
+            alt="Teren ogrodowy przed uporządkowaniem"
+          />
+          <div class="comparison__after">
+            <img
+              src="https://images.unsplash.com/photo-1591857177580-dc82b9ac4e1e?auto=format&fit=crop&w=1500&q=86"
+              alt="Gotowy ogród po rewitalizacji"
+            />
+          </div>
+          <span class="comparison__label comparison__label--before">Teren do uporządkowania</span>
+          <span class="comparison__label comparison__label--after">Gotowy ogród</span>
+          <span class="comparison__handle" aria-hidden="true"></span>
+          <input type="range" min="0" max="100" value="52" aria-label="Porównaj przed i po" />
+        </div>
+        <div class="compare-points">
+          <article data-reveal>
+            <i data-lucide="shovel"></i>
+            <h3>Przygotowanie terenu</h3>
+            <p>Porządki, wyrównanie ziemi, usunięcie problemów i przygotowanie pod trawnik oraz rabaty.</p>
+          </article>
+          <article data-reveal>
+            <i data-lucide="route"></i>
+            <h3>Funkcjonalny układ</h3>
+            <p>Ścieżki, przejścia, obrzeża, kostka brukowa i strefy wypoczynku prowadzone w jednym planie.</p>
+          </article>
+          <article data-reveal>
+            <i data-lucide="flower-2"></i>
+            <h3>Rośliny i pielęgnacja</h3>
+            <p>Dobór roślin, nasadzenia, ochrona przed szkodnikami i późniejszy serwis sezonowy.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="cennik" class="pricing section-pad">
+        <div class="section-head section-head--center">
+          <p class="eyebrow">Pakiety i wycena</p>
+          <h2>Zakres prac dopasowany do wielkości ogrodu, domu lub obiektu.</h2>
+          <p>
+            Podane kwoty pomagają szybko określić skalę zlecenia. Finalna wycena
+            jest przygotowywana po rozmowie, zdjęciach lub oględzinach na miejscu.
+          </p>
+        </div>
+
+        <div class="price-tabs" role="tablist" aria-label="Wybierz cennik">
+          <button class="is-active" type="button" data-price-tab="garden">Garden</button>
+          <button type="button" data-price-tab="house">House</button>
+          <button type="button" data-price-tab="clean">Clean</button>
+          <button type="button" data-price-tab="rental">Wypożyczalnia</button>
+        </div>
+
+        <div class="price-panels">
+          <div class="price-panel is-active" data-price-panel="garden">
+            <article class="price-card">
+              <span>Konsultacja w ogrodzie</span>
+              <strong>od 250 zł</strong>
+              <p>Diagnoza, rekomendacje, lista prac i szybki plan sezonowy.</p>
+            </article>
+            <article class="price-card price-card--accent">
+              <span>Pielęgnacja cykliczna</span>
+              <strong>od 180 zł / wizyta</strong>
+              <p>Koszenie, przycinanie, nawożenie, porządki i opieka nad roślinami.</p>
+            </article>
+            <article class="price-card">
+              <span>Zakładanie trawnika</span>
+              <strong>od 35 zł / m²</strong>
+              <p>Przygotowanie podłoża, wysiew lub trawnik z rolki, start pielęgnacji.</p>
+            </article>
+          </div>
+
+          <div class="price-panel" data-price-panel="house">
+            <article class="price-card">
+              <span>Prace konserwacyjne</span>
+              <strong>od 120 zł / h</strong>
+              <p>Drobne naprawy, techniczne prace domowe i serwis obiektu.</p>
+            </article>
+            <article class="price-card price-card--accent">
+              <span>Wykończenie pod klucz</span>
+              <strong>wycena indywidualna</strong>
+              <p>Zakres, materiały, harmonogram i koordynacja ekip w jednym planie.</p>
+            </article>
+            <article class="price-card">
+              <span>Małe budownictwo</span>
+              <strong>od 900 zł</strong>
+              <p>Altany, ogrodzenia, wiaty, podjazdy i prace wokół posesji.</p>
+            </article>
+          </div>
+
+          <div class="price-panel" data-price-panel="clean">
+            <article class="price-card">
+              <span>Sprzątanie domu</span>
+              <strong>od 180 zł</strong>
+              <p>Jednorazowe lub cykliczne sprzątanie mieszkań i domów.</p>
+            </article>
+            <article class="price-card price-card--accent">
+              <span>Sprzątanie po remoncie</span>
+              <strong>od 8 zł / m²</strong>
+              <p>Doczyszczenie pyłu, mycie powierzchni, przygotowanie do odbioru.</p>
+            </article>
+            <article class="price-card">
+              <span>Biura i obiekty</span>
+              <strong>od 2,50 zł / m²</strong>
+              <p>Regularny standard czystości dla firm, hoteli i części wspólnych.</p>
+            </article>
+          </div>
+
+          <div class="price-panel" data-price-panel="rental">
+            <article class="price-card">
+              <span>Wertykulator</span>
+              <strong>od 100 zł / doba</strong>
+              <p>Regeneracja trawnika przed sezonem lub po intensywnym użytkowaniu.</p>
+            </article>
+            <article class="price-card price-card--accent">
+              <span>Glebogryzarka</span>
+              <strong>od 120 zł / doba</strong>
+              <p>Przygotowanie gruntu pod rabaty, warzywnik lub nowy trawnik.</p>
+            </article>
+            <article class="price-card">
+              <span>Myjka ciśnieniowa</span>
+              <strong>od 80 zł / doba</strong>
+              <p>Kostka brukowa, tarasy, elewacje i sezonowe doczyszczanie.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="opinie" class="reviews section-pad">
+        <div class="reviews__copy">
+          <p class="eyebrow">Opinie klientów</p>
+          <h2>5.0/5 w Google i język, który buduje zaufanie.</h2>
+          <p>
+            Klienci doceniają terminowość, słowność i fachowe podejście. To szczególnie
+            ważne przy usługach, które wpływają na wygląd domu i komfort codzienności.
+          </p>
+        </div>
+
+        <div class="swiper review-slider" aria-label="Slider opinii klientów">
+          <div class="swiper-wrapper">
+            <article class="swiper-slide review-card">
+              <div class="stars">★★★★★</div>
+              <p>
+                "Rewelacyjna firma, profesjonalizm, punktualność, słowność. Ogród
+                wygląda pięknie o każdej porze roku. Szczerze polecam."
+              </p>
+              <strong>Monika Bryniarska</strong>
+              <span>Google · 5/5</span>
+            </article>
+            <article class="swiper-slide review-card">
+              <div class="stars">★★★★★</div>
+              <p>"Serdecznie polecamy tę firmę. Mega profesjonalizm!"</p>
+              <strong>McDonald's Nowy Targ</strong>
+              <span>Google · 5/5</span>
+            </article>
+            <article class="swiper-slide review-card">
+              <div class="stars">★★★★★</div>
+              <p>"Fachowo i skutecznie, polecam."</p>
+              <strong>Elżbieta</strong>
+              <span>Google · 5/5</span>
+            </article>
+            <article class="swiper-slide review-card">
+              <div class="stars">★★★★★</div>
+              <p>
+                "Odporúčame práce firmy pána Adriana a tešíme sa z našej revitalizovanej
+                záhrady, nových stromov a všetkých kvitnúcich rastlín."
+              </p>
+              <strong>Zdenka Prikrylová</strong>
+              <span>Google · 5/5</span>
+            </article>
+          </div>
+          <div class="review-controls">
+            <button class="review-prev" type="button" aria-label="Poprzednia opinia">
+              <i data-lucide="arrow-left"></i>
+            </button>
+            <button class="review-next" type="button" aria-label="Następna opinia">
+              <i data-lucide="arrow-right"></i>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="clients" aria-label="Klienci i marki">
+        <div class="client-marquee">
+          <span>Orlen</span>
+          <span>Intersport</span>
+          <span>Lewiatan</span>
+          <span>Pepco</span>
+          <span>Ziko</span>
+          <span>Szpital Nowy Targ</span>
+          <span>MMKS Podhale</span>
+          <span>Gamatex</span>
+          <span>Orawskie</span>
+          <span>Yasumi</span>
+          <span>Steskal</span>
+          <span>Bursa</span>
+          <span>Lavard</span>
+          <span>FCC</span>
+          <span>Kostmar</span>
+          <span>Urząd Gminy Nowy Targ</span>
+          <span>Orlen</span>
+          <span>Intersport</span>
+          <span>Lewiatan</span>
+          <span>Pepco</span>
+          <span>Ziko</span>
+          <span>Szpital Nowy Targ</span>
+        </div>
+      </section>
+
+      <section class="faq section-pad">
+        <div class="section-head">
+          <p class="eyebrow">Pytania przed kontaktem</p>
+          <h2>Krótko, konkretnie, bez chaosu.</h2>
+        </div>
+        <div class="faq-list">
+          <article class="faq-item is-open">
+            <button type="button">
+              Czy można zamówić jedną usługę, a nie cały pakiet?
+              <i data-lucide="chevron-down"></i>
+            </button>
+            <div>
+              <p>
+                Tak. Można zamówić pojedynczą usługę: koszenie, nasadzenia,
+                sprzątanie po remoncie, wynajem sprzętu albo prace techniczne.
+              </p>
+            </div>
+          </article>
+          <article class="faq-item">
+            <button type="button">
+              Czy REMADE wykonuje projekty ogrodów od zera?
+              <i data-lucide="chevron-down"></i>
+            </button>
+            <div>
+              <p>
+                Tak, zakres może objąć koncepcję, przygotowanie terenu, dobór roślin,
+                trawnik, ogrodzenia, małą architekturę i późniejszą pielęgnację.
+              </p>
+            </div>
+          </article>
+          <article class="faq-item">
+          <button type="button">
+            Czy cennik jest finalny?
+              <i data-lucide="chevron-down"></i>
+            </button>
+            <div>
+              <p>
+                Nie. Każdy ogród, dom i obiekt wymaga innego zakresu prac, dlatego
+                finalna wycena powstaje po krótkiej analizie potrzeb, powierzchni i materiałów.
+              </p>
+            </div>
+          </article>
+          <article class="faq-item">
+            <button type="button">
+              Jakie formy płatności są dostępne?
+              <i data-lucide="chevron-down"></i>
+            </button>
+            <div>
+              <p>
+                Dla wygody klientów dostępne są płatności kartą, BLIK-iem lub telefonem.
+                Szczegóły warto potwierdzić przy umawianiu usługi albo wypożyczeniu sprzętu.
+              </p>
+            </div>
+          </article>
+          <article class="faq-item">
+            <button type="button">
+              Kiedy można wypożyczyć sprzęt ogrodniczy?
+              <i data-lucide="chevron-down"></i>
+            </button>
+            <div>
+              <p>
+                Wypożyczalnia sprzętu ogrodniczego działa 7 dni w tygodniu od 8:00 do 20:00.
+                Przed przyjazdem najlepiej sprawdzić aktualną dostępność potrzebnego sprzętu.
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="kontakt" class="contact section-pad">
+        <div class="contact__copy">
+          <p class="eyebrow">Kontakt</p>
+          <h2>Umów oględziny, konsultację albo szybką wycenę.</h2>
+          <p>
+            REMADE Polska - Kamil Bryniarski<br />
+            ul. Szaflarska 128, 34-400 Nowy Targ<br />
+            NIP: 735-282-26-96 · REGON: 121429301
+          </p>
+
+          <div class="contact-grid">
+            <a href="tel:+48513729999">
+              <i data-lucide="phone"></i>
+              513 72 99 99
+            </a>
+            <a href="tel:+48513619999">
+              <i data-lucide="phone"></i>
+              513 61 99 99
+            </a>
+            <a href="tel:+48513429999">
+              <i data-lucide="phone"></i>
+              513 42 99 99
+            </a>
+            <a href="tel:+48513819999">
+              <i data-lucide="phone"></i>
+              513 81 99 99
+            </a>
+            <a href="mailto:remade.polska@gmail.com">
+              <i data-lucide="mail"></i>
+              remade.polska@gmail.com
+            </a>
+            <a href="mailto:garden@re-made.pl">
+              <i data-lucide="mail"></i>
+              garden@re-made.pl
+            </a>
+          </div>
+
+          <div class="hours">
+            <span>Godziny kontaktu</span>
+            <strong>pon-pt 08:00-18:00</strong>
+            <small>sobota i niedziela: zamknięte · terminy realizacji po ustaleniu</small>
+          </div>
+
+          <div class="hours">
+            <span>Wypożyczalnia sprzętu</span>
+            <strong>7 dni w tygodniu 08:00-20:00</strong>
+            <small>płatność kartą, BLIK-iem lub telefonem · dostępność sprzętu po potwierdzeniu</small>
+          </div>
+
+          <div class="socials">
+            <a href="https://www.facebook.com/REMADEGarden/" target="_blank" rel="noreferrer">
+              <i data-lucide="thumbs-up"></i>
+              Facebook
+            </a>
+            <a href="https://www.instagram.com/remade_garden/" target="_blank" rel="noreferrer">
+              <i data-lucide="camera"></i>
+              Instagram
+            </a>
+          </div>
+        </div>
+
+        <div class="contact__form-wrap">
+          <form class="quote-form" id="quoteForm">
+            <div class="form-row">
+              <label for="service">Usługa</label>
+              <select id="service" name="service">
+                <option>Ogród / pielęgnacja</option>
+                <option>Remont / wykończenie</option>
+                <option>Sprzątanie</option>
+                <option>Wypożyczalnia sprzętu</option>
+              </select>
+            </div>
+            <div class="form-row">
+              <label for="name">Imię i nazwisko</label>
+              <input id="name" name="name" type="text" placeholder="Jan Kowalski" />
+            </div>
+            <div class="form-row form-row--split">
+              <div>
+                <label for="phone">Telefon</label>
+                <input id="phone" name="phone" type="tel" placeholder="500 000 000" />
+              </div>
+              <div>
+                <label for="city">Miejscowość</label>
+                <input id="city" name="city" type="text" placeholder="Nowy Targ" />
+              </div>
+            </div>
+            <div class="form-row">
+              <label for="message">Zakres prac</label>
+              <textarea id="message" name="message" rows="4" placeholder="Opisz krótko, czego potrzebujesz"></textarea>
+            </div>
+            <button class="button button--primary" type="submit">
+              <i data-lucide="send"></i>
+              Wyślij zapytanie
+            </button>
+            <p class="form-status" role="status" aria-live="polite"></p>
+          </form>
+
+          <div class="map">
+            <iframe
+              title="Mapa REMADE Polska"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              src="https://www.google.com/maps?q=Szaflarska%20128%2C%2034-400%20Nowy%20Targ&output=embed"
+            ></iframe>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <strong>REMADE Polska</strong>
+        <span>Ogród odnowa · dom odnowa · czystość odnowa</span>
+      </div>
+      <a href="#top" aria-label="Wróć na górę">
+        <i data-lucide="arrow-up"></i>
+      </a>
+    </footer>
+
+    <div class="mobile-cta">
+      <a href="tel:+48513619999">
+        <i data-lucide="phone"></i>
+        Zadzwoń
+      </a>
+      <a href="#kontakt">
+        <i data-lucide="message-circle"></i>
+        Wycena
+      </a>
+    </div>
+
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
