@@ -1,2 +1,4 @@
 User-agent: *
 Allow: /
+
+Sitemap: https://tatara-kj.github.io/remade-garden/osc-ogrodzenia/sitemap.xml

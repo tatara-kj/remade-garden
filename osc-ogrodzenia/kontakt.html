@@ -6,15 +6,37 @@
     <title>Kontakt i wycena ogrodzenia — OSC Chudów</title>
     <meta
       name="description"
-      content="Zapytaj o wycenę ogrodzenia, bramy, furtki, automatyki lub serwisu. OSC Ogrodzenia, ul. Wolności 33B, Chudów. Tel. 667 052 883."
+      content="Zapytaj o wycenę ogrodzenia, bramy, automatyki lub serwisu. OSC Ogrodzenia, ul. Wolności 33B, Chudów. Tel. 667 052 883."
     />
     <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://tatara-kj.github.io/remade-garden/osc-ogrodzenia/kontakt.html" />
     <meta property="og:locale" content="pl_PL" />
     <meta property="og:title" content="Kontakt i wycena — OSC Ogrodzenia" />
     <meta property="og:description" content="Zadzwoń lub przygotuj zapytanie o ogrodzenie, bramę, automatykę albo serwis." />
     <meta property="og:image" content="assets/fb/osc-fb-01.jpg" />
     <meta name="theme-color" content="#2B2B2B" />
+    <link rel="canonical" href="https://tatara-kj.github.io/remade-garden/osc-ogrodzenia/kontakt.html" />
     <link rel="icon" href="assets/favicon-osc.png" type="image/png" />
+    <!-- Google Search Console verification tag goes here -->
+    <script>
+      window.OSC_GA4_MEASUREMENT_ID = ""; // Wklej tutaj Measurement ID GA4, np. G-XXXXXXXXXX
+    </script>
+    <script>
+      (() => {
+        const id = window.OSC_GA4_MEASUREMENT_ID;
+        if (!id || id === "G-XXXXXXXXXX") return;
+        const script = document.createElement("script");
+        script.async = true;
+        script.src = `https://www.googletagmanager.com/gtag/js?id=${encodeURIComponent(id)}`;
+        document.head.append(script);
+        window.dataLayer = window.dataLayer || [];
+        window.gtag = function gtag() {
+          window.dataLayer.push(arguments);
+        };
+        window.gtag("js", new Date());
+        window.gtag("config", id);
+      })();
+    </script>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -53,7 +75,7 @@
       <section class="page-hero">
         <img
           src="assets/fb/osc-fb-01.jpg"
-          alt="Nowoczesne ogrodzenie z bramą i furtką"
+          alt="Nowoczesne ogrodzenie z bramą"
         />
         <div class="container page-hero__content">
           <span class="eyebrow">Kontakt i wycena</span>
@@ -145,9 +167,8 @@
                 <label for="usluga">Rodzaj usługi *</label
                 ><select id="usluga" name="usluga" required>
                   <option value="">Wybierz usługę</option>
-                  <option>Ogrodzenie</option>
-                  <option>Brama</option>
-                  <option>Furtka</option>
+                  <option>Ogrodzenia</option>
+                  <option>Bramy</option>
                   <option>Automatyka</option>
                   <option>Serwis</option>
                 </select>
@@ -157,16 +178,18 @@
                 ><input
                   id="dlugosc"
                   name="dlugosc"
-                  placeholder="np. 35 m ogrodzenia lub 5 m wjazdu"
+                  aria-describedby="dlugosc-help"
                 />
+                <small id="dlugosc-help" class="field-hint">Np. 35 m ogrodzenia lub 5 m wjazdu.</small>
               </div>
               <div class="field field--full">
                 <label for="opis">Krótki opis</label
                 ><textarea
                   id="opis"
                   name="opis"
-                  placeholder="Napisz, czego potrzebujesz. Przy serwisie opisz objawy problemu."
+                  aria-describedby="opis-help"
                 ></textarea>
+                <small id="opis-help" class="field-hint">Opisz krótko zakres prac. Przy serwisie podaj objawy problemu.</small>
               </div>
               <div class="field field--full">
                 <label class="choice"

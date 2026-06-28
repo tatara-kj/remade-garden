@@ -79,15 +79,19 @@ document.querySelectorAll("[data-estimate-form]").forEach((form) => {
     }
     const data = new FormData(form);
     const name = String(data.get("imie") || "").trim();
-    const subject = `Zapytanie ze strony OSC — ${data.get("usluga") || "wycena"}`;
+    const subject = "Zapytanie ze strony OSC Ogrodzenia";
     const bodyText = [
+      "Nowe zapytanie ze strony OSC Ogrodzenia",
+      "",
       `Imię: ${name}`,
       `Telefon: ${data.get("telefon") || ""}`,
       `E-mail: ${data.get("email") || ""}`,
       `Miejscowość: ${data.get("miejscowosc") || ""}`,
       `Usługa: ${data.get("usluga") || ""}`,
-      `Długość ogrodzenia: ${data.get("dlugosc") || ""}`,
+      `Orientacyjny wymiar: ${data.get("dlugosc") || ""}`,
       `Opis: ${data.get("opis") || ""}`,
+      "",
+      "Jeżeli klient ma zdjęcia posesji, bramy lub napędu, może dołączyć je w odpowiedzi na tę wiadomość.",
     ].join("\n");
     status.textContent = `Dziękujemy${name ? `, ${name}` : ""}. Otwieramy gotową wiadomość do OSC.`;
     window.location.href = `mailto:ogrodzeniasc@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(bodyText)}`;

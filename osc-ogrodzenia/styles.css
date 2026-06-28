@@ -817,6 +817,27 @@ h3 {
   color: var(--steel);
   font-size: 0.84rem;
 }
+.google-reviews {
+  border: 1px solid var(--line);
+  background: var(--white);
+  box-shadow: var(--shadow);
+}
+.google-reviews__fallback {
+  display: grid;
+  gap: 14px;
+  padding: clamp(26px, 5vw, 46px);
+}
+.google-reviews__fallback h3 {
+  margin: 0;
+  font-family: "Barlow Condensed";
+  font-size: clamp(1.9rem, 4vw, 2.7rem);
+  text-transform: uppercase;
+}
+.google-reviews__fallback p {
+  max-width: 780px;
+  margin: 0;
+  color: var(--steel);
+}
 
 .area {
   display: grid;
@@ -943,6 +964,12 @@ h3 {
   color: #36414b;
   font-size: 0.79rem;
   font-weight: 800;
+}
+.field-hint {
+  display: block;
+  color: var(--steel);
+  font-size: 0.78rem;
+  line-height: 1.4;
 }
 .field input,
 .field select,
