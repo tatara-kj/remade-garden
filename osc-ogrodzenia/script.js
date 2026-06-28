@@ -18,22 +18,6 @@ if (navToggle && nav) {
   );
 }
 
-const filterButtons = document.querySelectorAll("[data-filter]");
-const galleryCards = document.querySelectorAll("[data-category]");
-filterButtons.forEach((button) =>
-  button.addEventListener("click", () => {
-    const filter = button.dataset.filter;
-    filterButtons.forEach((item) => {
-      const active = item === button;
-      item.classList.toggle("is-active", active);
-      item.setAttribute("aria-pressed", String(active));
-    });
-    galleryCards.forEach((card) => {
-      card.hidden = filter !== "all" && card.dataset.category !== filter;
-    });
-  }),
-);
-
 const lightbox = document.querySelector("[data-lightbox]");
 const lightboxImage = lightbox?.querySelector("img");
 const lightboxCaption = lightbox?.querySelector("[data-lightbox-caption]");
@@ -113,6 +97,15 @@ document.querySelectorAll("[data-estimate-form]").forEach((form) => {
 document.querySelectorAll("[data-year]").forEach((item) => {
   item.textContent = new Date().getFullYear();
 });
+
+const backToTop = document.querySelector("[data-back-to-top]");
+if (backToTop) {
+  const toggleBackToTop = () => {
+    backToTop.classList.toggle("is-visible", window.scrollY > 520);
+  };
+  toggleBackToTop();
+  window.addEventListener("scroll", toggleBackToTop, { passive: true });
+}
 
 document.querySelectorAll(".footer__bottom").forEach((footerBottom) => {
   if (!footerBottom.querySelector('a[href="polityka-prywatnosci.html"]')) {

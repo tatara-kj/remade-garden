@@ -1,7 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 64" role="img" aria-labelledby="title">
-  <title id="title">OSC Ogrodzenia</title>
-  <rect width="64" height="64" rx="6" fill="#f59e0b"/>
-  <path d="M15 18h34v7H22v14h20v-5H28v-7h21v19H15V18Z" fill="#18212a"/>
-  <text x="75" y="49" fill="#fff" font-family="Arial Black, Arial, sans-serif" font-size="41" font-weight="900" letter-spacing="1">OSC</text>
-  <text x="76" y="62" fill="#aeb6bf" font-family="Arial, sans-serif" font-size="8" font-weight="700" letter-spacing="2.8">OGRODZENIA</text>
-</svg>
