@@ -16,8 +16,7 @@
 2. W Search Console dodaje usługę typu `URL prefix` dla:
    `https://tatara-kj.github.io/remade-garden/osc-ogrodzenia/`
 3. Najprostsza weryfikacja: meta tag HTML lub plik HTML.
-4. Jeśli klient wybierze meta tag, należy wkleić go w sekcji `<head>` w miejscu:
-   `<!-- Google Search Console verification tag goes here -->`
+4. Jeśli klient wybierze meta tag, należy dodać go w sekcji `<head>` każdej podstrony.
 5. Jeśli klient wybierze plik HTML, należy dodać go do katalogu `osc-ogrodzenia/` i wdrożyć na serwer.
 6. Po wdrożeniu klient klika `Zweryfikuj`.
 7. Po weryfikacji należy wysłać sitemapę:
@@ -31,8 +30,7 @@ Opcje wdrożenia:
 
 1. Najprościej: widget Google Reviews z narzędzia typu Trustindex, Elfsight lub podobnego.
 2. Alternatywnie: integracja przez Google Places API. Należy pamiętać, że Places API oficjalnie zwraca ograniczoną liczbę opinii.
-3. Kod widgetu należy wkleić w miejscach oznaczonych:
-   `<!-- Google Reviews widget code goes here -->`
+3. Kod widgetu należy osadzić w sekcjach opinii na stronie głównej i podstronie opinii.
 
 Profil Google Maps firmy:
 `https://www.google.pl/maps/place/OSC+Ogrodzenia+Sebastian+Charuk/@50.2096999,18.7740765,15z/data=!4m2!3m1!1s0x0:0xc600845d9234825e`
